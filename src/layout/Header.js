@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import logo from "../assets/images/logo.png";
-import comb from "../assets/images/123.png";
+import comb from "../assets/images/test1.png";
 
 const Header = (props) => (
   <header id="header" className="alt">
@@ -10,7 +10,15 @@ const Header = (props) => (
       <img src={logo} alt="" />
     </Link>
     <nav>
-      <img src={comb} width="130px" height="85px" alt="123" className="menu-link" onClick={props.onToggleMenu} />
+      <img
+        alt="hi"
+        src={comb}
+        width="130px"
+        height="135px"
+        className="menu-link"
+        onClick={props.onToggleMenu}
+        onKeyDown={props.onToggleMenu}
+      />
     </nav>
   </header>
 );

@@ -22,8 +22,7 @@ class HomeIndex extends React.Component {
             },
             {
               name: "keywords",
-              content:
-                "Digital Agency Belfast, Web Agency, Belfast Web Developer",
+              content: "Digital Agency, Web Agency, Web Developer",
             },
           ]}
         ></Helmet>

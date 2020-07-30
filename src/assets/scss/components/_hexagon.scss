@@ -1,0 +1,35 @@
+.hexagon {
+  padding: 20px;
+}
+.hexagon_top {
+  width: 0;
+  border-bottom: 60px solid _palette(yellow);
+  border-left: 104px solid transparent;
+  border-right: 104px solid transparent;
+}
+.hexagon_mid {
+  width: 208px;
+  height: 120px;
+  background-color: _palette(yellow);
+  text-align: center;
+  .hex_inner {
+    padding: 15px;
+    h3 {
+      color: black;
+    }
+  }
+}
+.hexagon_bottom {
+  width: 0;
+  border-top: 60px solid _palette(yellow);
+  border-left: 104px solid transparent;
+  border-right: 104px solid transparent;
+}
+
+.hexagon_row {
+  margin-top: -70px;
+
+  @include breakpoint(xsmall) {
+    margin-top: -20px;
+  }
+}

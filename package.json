@@ -14,6 +14,7 @@
     "gatsby-plugin-offline": "^3.0.6",
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sass": "^2.1.14",
+    "gatsby-source-strapi": "^0.0.12",
     "gatsby-source-wordpress": "^3.2.3",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
@@ -21,7 +22,9 @@
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.9.0"
+    "react-icons": "^3.9.0",
+    "react-markdown": "^4.3.1",
+    "react-moment": "^0.9.7"
   },
   "keywords": [
     "gatsby"

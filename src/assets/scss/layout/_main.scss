@@ -23,14 +23,13 @@
 
 .bg-orange {
   color: _palette(fg-bold);
-  background-color: _palette(orange);
-  svg{
-    margin: 10px 0; 
+  background-color: _palette(dark_orange);
+  svg {
+    margin: 10px 0;
     font-size: 40px;
   }
   h2,
-  h3{
+  h3 {
     color: _palette(fg-bold);
-
   }
 }

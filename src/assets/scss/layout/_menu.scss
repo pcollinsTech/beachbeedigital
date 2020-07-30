@@ -8,18 +8,20 @@
 
 #menu {
   @include vendor(
-    'transition',
+    "transition",
     (
-      'transform #{_duration(menu)} ease',
-      'opacity #{_duration(menu)} ease',
-      'visibility #{_duration(menu)}'
+      "transform #{_duration(menu)} ease",
+      "opacity #{_duration(menu)} ease",
+      "visibility #{_duration(menu)}"
     )
   );
-  @include vendor('align-items', 'center');
-  @include vendor('display', 'flex');
-  @include vendor('justify-content', 'center');
-  @include vendor('pointer-events', 'none');
-  background: transparentize(_palette(blue), 0.1);
+  @include vendor("align-items", "center");
+  @include vendor("display", "flex");
+  @include vendor("justify-content", "center");
+  @include vendor("pointer-events", "none");
+  background-image: url("../images/hexagon_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   box-shadow: none;
   height: 100%;
   left: 0;
@@ -34,14 +36,14 @@
 
   .inner {
     @include vendor(
-      'transition',
+      "transition",
       (
-        'transform #{_duration(menu)} ease-out',
-        'opacity #{_duration(menu)} ease',
-        'visibility #{_duration(menu)}'
+        "transform #{_duration(menu)} ease-out",
+        "opacity #{_duration(menu)} ease",
+        "visibility #{_duration(menu)}"
       )
     );
-    @include vendor('transform', 'rotateX(20deg)');
+    @include vendor("transform", "rotateX(20deg)");
     -webkit-overflow-scrolling: touch;
     max-width: 100%;
     max-height: 100vh;
@@ -68,10 +70,7 @@
       padding: 0;
 
       > li {
-        padding: 0;
-
         > a:not(.button) {
-          color: _palette(fg-bold);
           border: 0;
           border-top: solid 1px _palette(border);
           display: block;
@@ -81,6 +80,8 @@
           line-height: 4em;
           text-decoration: none;
           text-transform: uppercase;
+          color: black;
+          font-size: xx-large;
         }
 
         > .button {
@@ -98,7 +99,7 @@
   }
 
   .close {
-    @include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+    @include vendor("transition", "color #{_duration(transition)} ease-in-out");
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     border: 0;
     cursor: pointer;
@@ -119,12 +120,13 @@
     &:before,
     &:after {
       @include vendor(
-        'transition',
-        'opacity #{_duration(transition)} ease-in-out'
+        "transition",
+        "opacity #{_duration(transition)} ease-in-out"
       );
+
       background-position: center;
       background-repeat: no-repeat;
-      content: '';
+      content: "";
       display: block;
       height: 4em;
       position: absolute;
@@ -163,16 +165,16 @@ body.is-ie {
 
 .body.is-menu-visible {
   #wrapper {
-    @include vendor('filter', 'blur(0.5em)');
+    @include vendor("filter", "blur(0.5em)");
   }
 
   #menu {
-    @include vendor('pointer-events', 'auto');
+    @include vendor("pointer-events", "auto");
     opacity: 1;
     visibility: visible;
 
     .inner {
-      @include vendor('transform', 'none');
+      @include vendor("transform", "none");
       opacity: 1;
       visibility: visible;
     }
