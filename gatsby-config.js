@@ -1,16 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Forty V2",
-    author: "Hunter Chang",
-    description: "A Gatsby.js V2 Starter based on Forty by HTML5 UP",
+    title: "Beach Bee Digital",
+    author: "Phil Collins",
+    description:
+      "At Beach Bee we are here to kick-start your digital strategy, giving you the advice, tools and help needed to get the ball rolling, developing your business into an unstoppable avalanche of success.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "Beach Bee Digital",
+        short_name: "Beach Bee Digital",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",

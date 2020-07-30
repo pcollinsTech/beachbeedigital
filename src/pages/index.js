@@ -32,7 +32,7 @@ class HomeIndex extends React.Component {
         <div id="main">
           <div className="container text-center my-5 p-5">
             <p>
-              At BeachBee we are here to kick-start your digital strategy,
+              At Beach Bee we are here to kick-start your digital strategy,
               giving you the advice, tools and help needed to get the ball
               rolling, developing your business into an unstoppable avalanche of
               success.
