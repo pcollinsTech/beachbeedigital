@@ -17,11 +17,11 @@ export default function Services() {
           <HexagonCard title="Web Development" icon={FaDrawPolygon} />
         </Row>
         <Row className="flex justify-content-center hexagon_row">
-          <HexagonCard title="E-Commerce" icon={MdAddShoppingCart} />
-          <HexagonCard title="Digital Marketing" icon={MdAddShoppingCart} />
+          <HexagonCard title="Graphic Design" icon={MdAddShoppingCart} />
+          <HexagonCard title="Photography" icon={MdAddShoppingCart} />
         </Row>
         <Row className="flex justify-content-center hexagon_row">
-          <HexagonCard title="E-Commerce" icon={MdAddShoppingCart} />
+          <HexagonCard title="Systems support" icon={MdAddShoppingCart} />
         </Row>
       </div>
     </div>
