@@ -1,7 +1,8 @@
-#contact{
-    .field{
-        input, textarea{
-            border: 1px #231e46 solid;
-        }
+#contact {
+  .field {
+    input,
+    textarea {
+      border: 1px _palette(fg) solid;
     }
+  }
 }

@@ -1,15 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
-import { Banner, Services, Heading } from "../components";
+import { Banner, Services, Heading, Projects } from "../components";
 import Layout from "../layout/layout";
-
-import outside2 from "../assets/images/outside2.jpg";
-import pic02 from "../assets/images/pic02.jpg";
-
 class HomeIndex extends React.Component {
+  
   render() {
+    console.log("this.props", this.props)
     return (
       <Layout>
         <Helmet
@@ -52,44 +50,25 @@ class HomeIndex extends React.Component {
           </div>
 
           <Services />
-          <section className="pt-5">
+          <section className="">
             <Heading title="Projects" />
-            <section id="one" className="tiles">
-              <article style={{ backgroundImage: `url(${outside2})` }}>
-                <header className="major">
-                  <h3>2 Taps Winebar</h3>
-                  <p>Tapas Restaurant Belfast</p>
-                </header>
-                <Link to="/2taps" className="link primary"></Link>
-              </article>
-              <article style={{ backgroundImage: `url(${pic02})` }}>
-                <header className="major">
-                  <h3>Tempus</h3>
-                  <p>feugiat amet tempus</p>
-                </header>
-                <Link to="/landing" className="link primary"></Link>
-              </article>
-            </section>
+            <Projects projects={this.props.data.allMarkdownRemark.nodes} />
           </section>
           <section id="two" className="bg-orange">
-            <div className="inner">
-              <header className="major">
-                <h2>Massa libero</h2>
+            <div className="inner text-center">
+              <header className="major mx-auto">
+                <h2>Get in Touch</h2>
               </header>
               <p>
-                Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-                Pellentesque condimentum sem. In efficitur ligula tate urna.
-                Maecenas laoreet massa vel lacinia pellentesque lorem ipsum
-                dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
-                sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
-                amet pharetra et feugiat tempus.
+                At Beach Bee Digital we pride ourselves on being a digital
+                agency with a difference. <br />
+                We help businesses get to grips of their digital footprint and
+                give them the tools and advice they need to succeed. <br />
               </p>
+
               <ul className="actions">
                 <li>
-                  <Link to="/landing" className="button next">
-                    Get Started
-                  </Link>
+                  <Link to="#contact" className="button">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -101,3 +80,20 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          bannerImage {
+            publicURL
+          }
+          slug
+          title
+          subTitle
+        }
+      }
+    }
+  }
+`;

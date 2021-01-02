@@ -8,6 +8,28 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1080,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Beach Bee Digital",
@@ -24,11 +46,7 @@ module.exports = {
     //   resolve: "gatsby-source-strapi",
     //   options: {
     //     apiURL: process.env.API_URL || "http://localhost:1337",
-    //     contentTypes: [
-    //       // List of the Content Types you want to be able to request from Gatsby.
-    //       "project",
-    //       "post",
-    //     ],
+    //     contentTypes: ["project", "post"],
     //     queryLimit: 1000,
     //   },
     // },

@@ -6,8 +6,8 @@ export default function HexagonCard({ title, icon }) {
       <div className="hexagon_top"></div>
       <div className="hexagon_mid">
         <div className="hex_inner">
-          <h3>{title}</h3>
-          {icon}
+          <h4 style={{ marginBottom: "0" }}>{title}</h4>
+          <img src={icon} alt={title} style={{ maxHeight: "50px" }} />
         </div>
       </div>
       <div className="hexagon_bottom"></div>

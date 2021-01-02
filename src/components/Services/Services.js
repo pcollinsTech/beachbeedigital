@@ -1,27 +1,31 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import { MdAddShoppingCart } from "react-icons/md";
-import { AiFillWechat } from "react-icons/ai";
-import { FaDrawPolygon } from "react-icons/fa";
 import Heading from "../Heading/Heading";
 import HexagonCard from "../HexagonCard";
+
+import camera from "../../assets/images/icons/camera.svg";
+import design from "../../assets/images/icons/design.svg";
+import server from "../../assets/images/icons/server.svg";
+import programmer from "../../assets/images/icons/programmer.svg";
+import marketing from "../../assets/images/icons/marketing.svg";
+import ecommerce from "../../assets/images/icons/ecommerce.svg";
 
 export default function Services() {
   return (
     <div className="bg-orange">
-      <div class="container ">
+      <div className="container">
         <Heading title="Our Digital Ecosystem" white="true" />
         <Row className="flex justify-content-center ">
-          <HexagonCard title="E-Commerce" icon={MdAddShoppingCart} />
-          <HexagonCard title="Digital Marketing" icon={AiFillWechat} />
-          <HexagonCard title="Web Development" icon={FaDrawPolygon} />
+          <HexagonCard title="E-Commerce" icon={ecommerce} />
+          <HexagonCard title="Marketing" icon={marketing} />
+          <HexagonCard title="Development" icon={programmer} />
         </Row>
         <Row className="flex justify-content-center hexagon_row">
-          <HexagonCard title="Graphic Design" icon={MdAddShoppingCart} />
-          <HexagonCard title="Photography" icon={MdAddShoppingCart} />
+          <HexagonCard title="Graphic Design" icon={design} />
+          <HexagonCard title="Photography" icon={camera} />
         </Row>
         <Row className="flex justify-content-center hexagon_row">
-          <HexagonCard title="Systems support" icon={MdAddShoppingCart} />
+          <HexagonCard title="Support" icon={server} />
         </Row>
       </div>
     </div>

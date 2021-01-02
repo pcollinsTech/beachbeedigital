@@ -2,8 +2,8 @@ import React from "react";
 import Helmet from "react-helmet";
 import Layout from "../layout/layout";
 
-import pic09 from "../assets/images/pic09.jpg";
-import pic10 from "../assets/images/pic10.jpg";
+import pic09 from "../assets/images/phil.jpg";
+import pic10 from "../assets/images/jarron.jpeg";
 
 const About = (props) => (
   <Layout>
@@ -24,9 +24,9 @@ const About = (props) => (
           <h3>A new Kind of Digital Agency</h3>
           <p>
             <span className="image left">
-              <img src={pic09} alt="" />
+              <img src={pic10} alt="" />
             </span>
-            BeachBee is your one stop shop for digital services. We have
+            Beach Bee is your one stop shop for digital services. We have
             specific specialists for each service offered, ensuring you are
             getting the best performance, knowledge and value - it is their sole
             occupation and focus, ensuring there is no compromise regardless if
@@ -34,7 +34,7 @@ const About = (props) => (
           </p>
           <p>
             <span className="image right">
-              <img src={pic10} alt="" />
+              <img src={pic09} alt="" />
             </span>
             Based in Belfast, we get the craic. We understand the problems faced
             by Startups and SMEs, it can often be daunting and nerve-wracking
