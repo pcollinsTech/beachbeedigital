@@ -38,7 +38,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/assets/images/website-icon.png", // This path is relative to the root of the site.
+        icon: "src/assets/images/website-icon.png", 
       },
     },
 
@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-163515722-1", // <- your tracking ID
+        trackingId: "UA-163515722-1",
       },
     },
     "gatsby-plugin-sass",

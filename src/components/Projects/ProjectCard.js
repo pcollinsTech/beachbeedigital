@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import pic01 from "../../assets/images/pic01.jpg";
 export default function ProjectCard({ project }) {
-  console.log("PROEHCT", project);
   return (
     <article
       style={{
@@ -17,7 +16,7 @@ export default function ProjectCard({ project }) {
         <h3>{project.title}</h3>
         <p>{project.subTitle}</p>
       </header>
-      <Link to={`/projects/${project.slug}`} className="link primary"></Link>
+      <Link to={`/projects${project.slug}`} className="link primary"></Link>
     </article>
   );
 }

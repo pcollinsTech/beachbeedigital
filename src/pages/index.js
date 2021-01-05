@@ -7,7 +7,6 @@ import Layout from "../layout/layout";
 class HomeIndex extends React.Component {
   
   render() {
-    console.log("this.props", this.props)
     return (
       <Layout>
         <Helmet

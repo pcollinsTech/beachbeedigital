@@ -7,7 +7,6 @@ import ProjectBanner from "../components/ProjectBanner";
 
 export default function MDProject({ data }) {
   const { markdownRemark: { frontmatter } } = data 
-  console.log("ct", frontmatter)
   return (
     <Layout>
         <Helmet>
@@ -26,9 +25,7 @@ export default function MDProject({ data }) {
 					<header className="major">
 						<h2>Challenge</h2>
 					</header>
-					<p>
-                        {frontmatter.challenge}
-					</p>
+					<p dangerouslySetInnerHTML={{ __html: frontmatter.challenge}}/>
 				</div>
 			</section>
 			<section id="two" className="spotlights">
@@ -41,9 +38,7 @@ export default function MDProject({ data }) {
 							<header className="major">
 								<h3>What we Did</h3>
 							</header>
-							<p>
-								{frontmatter.resolution}
-							</p>
+							<p dangerouslySetInnerHTML={{ __html: frontmatter.resolution}}/>
 						</div>
 					</div>
 				</section>
@@ -57,9 +52,7 @@ export default function MDProject({ data }) {
 							<header className="major">
 								<h3>Conclusion</h3>
 							</header>
-							<p>
-								{frontmatter.conclusion}
-							</p>
+							<p dangerouslySetInnerHTML={{ __html: frontmatter.conclusion}}/>
 						</div>
 					</div>
 				</section>
@@ -80,14 +73,14 @@ export const pageQuery = graphql`
         subTitle
         challenge
         resolution
-        resolutionImage{
+        resolutionImage {
             publicURL
         }
         conclusion
-        conclusionImage{
+        conclusionImage {
             publicURL
         }
-        bannerImage{
+        bannerImage {
             publicURL
         }
       }

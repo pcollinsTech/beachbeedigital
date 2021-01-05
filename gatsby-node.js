@@ -81,7 +81,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/projects${node.frontmatter.slug}`,
       component: mdproject,
       context: {
-        // additional data can be passed via context
         slug: node.frontmatter.slug,
       },
     })
