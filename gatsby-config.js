@@ -38,7 +38,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/assets/images/website-icon.png", 
+        icon: "src/assets/images/bbd.ico", 
       },
     },
 
