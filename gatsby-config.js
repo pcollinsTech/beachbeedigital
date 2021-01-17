@@ -21,14 +21,20 @@ module.exports = {
         path: `${__dirname}/content/projects`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sharp`,
+
     {
-      resolve: `gatsby-remark-images`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        maxWidth: 1080,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1080,
+            },
+          },
+        ],
       },
-    },
+    },   
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Layout from "../layout/layout";
 import ProjectBanner from "../components/ProjectBanner";
+import Img from "gatsby-image"
 
 export default function MDProject({ data }) {
   const { markdownRemark: { frontmatter } } = data 
@@ -74,14 +75,22 @@ export const pageQuery = graphql`
         challenge
         resolution
         resolutionImage {
-            publicURL
+            childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         conclusion
         conclusionImage {
-            publicURL
+            childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         bannerImage {
-            publicURL
+          publicURL
         }
       }
     }
