@@ -75,19 +75,11 @@ export const pageQuery = graphql`
         challenge
         resolution
         resolutionImage {
-            childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+           publicURL
         }
         conclusion
         conclusionImage {
-            childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+           publicURL
         }
         bannerImage {
           publicURL
