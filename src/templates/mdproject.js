@@ -26,7 +26,7 @@ export default function MDProject({ data }) {
 					<header className="major">
 						<h2>Challenge</h2>
 					</header>
-					<p dangerouslySetInnerHTML={{ __html: frontmatter.challenge}}/>
+					<p dangerouslySetInnerHTML={{ __html: frontmatter.challenge}} style={{wordWrap: 'break-word'}}/>
 				</div>
 			</section>
 			<section id="two" className="spotlights">
